@@ -1,12 +1,26 @@
-let sum=()=>{console.log('iam a sum')}
-sum()
+// let sum=()=>{console.log('iam a sum')}
+// sum()
 
 
-function parent1(num:number,myfunc:()=>void):number{
-    console.log(num)
-    console.log(myfunc)
-    myfunc()
-    return 5
+// function parent1(num:number,myfunc:()=>void):number{
+//     console.log(num)
+//     console.log(myfunc)
+//     myfunc()
+//     return 5
+// }
+
+// parent1(2,sum)
+
+
+// function h():number{
+//     console.log()
+//     return 4
+// }
+let y=()=>{}
+function x(y){
+    y()
 }
-
-parent1(2,sum)
+function d(){}
+function myfunction(){
+    d()
+}

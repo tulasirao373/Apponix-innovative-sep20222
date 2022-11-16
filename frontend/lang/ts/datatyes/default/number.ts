@@ -3,7 +3,7 @@ console.log(myNum)
 
 var myString='hello'
 console.log(myString)
-class Mobile{
+class Mobile1{
     camera:number
     speaker:boolean
     constructor(){
@@ -12,5 +12,5 @@ class Mobile{
     }
 }
 
-var mymobbile=new Mobile()
+var mymobbile=new Mobile1()
 console.log(mymobbile)
