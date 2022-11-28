@@ -1,2 +1,5 @@
-export * from './home/home'
+export * from './Home/Home'
 export * from './contact/contact'
+export * from './jewelery/Jewelery'
+export * from './login'
+export * from './test'

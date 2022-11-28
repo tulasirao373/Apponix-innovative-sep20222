@@ -23,21 +23,32 @@
 // }
 
 
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
-import { Contact, Home } from './pages'
+import { Contact, Home, MyLogin, Test } from './pages'
+import Youtube from './pages/Youtube/Youtube'
+import { Jewelery } from "./pages/jewelery";
+import { Layout } from './pages/layout';
 
 export const App = () => {
 
     return (<>
-    <Router>
-        <Routes>
-       < Route path='/' element={<Home/>}/>
-       < Route path='/contact' element={<Contact/>}/>
-       < Route path='/about' element={<h1>hello im about</h1>}/>
-        </Routes>
-        </Router> 
-    
+        <Router>
+            <Layout>
+                <Routes>
+                    < Route path='/' element={<Home />} />
+                    < Route path='/contact' element={<Contact />} />
+                    < Route path='/about' element={<h1>hello im about</h1>} />
+                    < Route path='/Youtube' element={<Youtube />} />
+                    < Route path='/jewelery' element={<Jewelery />} />
+                    < Route path='/login' element={<MyLogin />} />
+                    < Route path='/test' element={<Test />} />
+
+                </Routes>
+            </Layout>
+
+        </Router>
+
     </>)
 }

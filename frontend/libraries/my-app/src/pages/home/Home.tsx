@@ -1,4 +1,16 @@
 import { MyH1 } from "../../components"
+import { Contact } from "../contact/contact"
+import { Rating1 } from "../../components/mui/Ratings/Rating1"
+import { Container, Grid } from "@mui/material"
+import { MyNavbar } from "../../components/navbar/MyNavbar"
+import { Mycarousel } from "../../components/carousels/Mycarousels"
+import { Mycard } from "../../components/mycards/Mycard"
+
+import img1 from '../../images/1.jpg'
+import img2 from '../../images/2.jpg'
+import img3 from '../../images/3.jpg'
+
+
 // interface Itest{
 //     a:string
 // }
@@ -11,9 +23,51 @@ import { MyH1 } from "../../components"
 // function test(a:object){
 //    // alert(a)
 //     console.log(a)
-   
+
 // }
-export const Home=()=>{
-    //test()
-   return  (<><MyH1 a={"hello"} bg={"blue"}/> </>)
+export const Home = () => {
+    return (<>
+        <Container maxWidth="xl" >
+            <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="stretch"
+            >
+                
+            </Grid>
+
+
+            <Grid
+                container
+                direction="column"
+                justifyContent="space-evenly"
+                alignItems="stretch"
+            >
+                <Mycarousel/>
+            </Grid>
+            <br/>
+
+            <Grid
+                container
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+            >
+                
+                <Mycard img={img1}/>
+                <Mycard img={img2}/>
+                <Mycard img={img3}/>
+            </Grid>
+        </Container>
+
+    </>)
 }
+
+
+{/* <h1>my topics</h1>
+<ol>
+ <li><MyState/></li>
+ <li><Rating1/></li>
+</ol>
+<MyH1 a={"hello"} bg={"blue"}/>  */}
