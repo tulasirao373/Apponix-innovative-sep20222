@@ -17,34 +17,24 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.post('/cars',(req:any,res:any)=>{
-    console.log(req.query)
-    console.log(req.body)
-   
-    // console.log(req.body)
-    res.send('hello dear friends')
-})
-
-app.post('/cars',(req:any,res:any)=>{
-    console.log(req.query.username)
-    res.send(req.query.username)
-})
-
-app.get('/user/:id',(req:any,res:any)=>{
-    console.log(req.params.id)
-    res.send(req.params.id)
-})//id is used to give unique names in [path]
-
-
-// app.get('/',(req:any,res:any)=>{
-//     res.send([{a:'apple',b:'ball'}])
+//it lookes at strtingand ending in between u can give anyththing
+// app.get('/c*ars',(req:any,res:any)=>{
+//     res.send('hello')
 // })
 
-// app.get('/a',(req:any,res:any)=>{
-//     res.send([{a:'apple',b:'ball'}])
+// app.get('/ca?rs',(req:any,res:any)=>{
+//     res.send('hello')
 // })
-
-
+//multiple path
+// app.get('/api/cars',(req:any,res:any)=>{
+//     res.send('hello')
+// })
+// app.get('/ca+rs',(req:any,res:any)=>{
+//     res.send('hello')
+// })
+// app.get('/cars/:id/:name',(req:any,res:any)=>{
+//     res.send('hello')
+// })
 
 app.listen(8003,()=>{
     console.log('server started on port no 8003')
