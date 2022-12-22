@@ -1,0 +1,8 @@
+var fs=require('fs')
+var tula=require('./tulalogs')
+// fs.mkdirSync('tulasiBreakfast')
+// fs.writeFileSync('tulasiBreakfast/tulaomlet.txt','tulasi rao wants to eat breadomlet along with....')
+// fs.appendFileSync('tulasiBreakfast/tulaomlet.txt','tommato sos with my favourite mayonis and grape juice')
+// tula.toorsi(fs.readFileSync('tulasiBreakfast/tulaomlet.txt','utf-8'))
+// fs.unlinkSync('tulasiBreakfast/demo.txt')
+fs.rmdirSync('demo')
