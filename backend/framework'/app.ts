@@ -22,7 +22,7 @@ app.post('/cars',(req:any,res:any)=>{
     console.log(req.body)
    
     // console.log(req.body)
-    res.send('hello dear')
+    res.send('hello dear friends')
 })
 
 app.post('/cars',(req:any,res:any)=>{
