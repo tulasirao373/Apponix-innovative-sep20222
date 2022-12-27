@@ -5,7 +5,7 @@ function middle1(req:any,res:any,next:any){
     console.log('im called advanced')
     next()
 }
-app.use(middle)
+app.use(middle1)
 app.use(cors())
 
 
