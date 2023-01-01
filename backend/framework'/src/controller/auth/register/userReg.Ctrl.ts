@@ -12,3 +12,16 @@ const savingUserInfoService=(name:any,email:any,password:any)=>{
     var userReg=new UserRegInfo({name,email,password})
     userReg.save()
 }
+
+export const userExits=(email:any,callback:Function)=>{
+    var user=UserRegInfo.findOne({email:email},(err:any,res:any)=>{
+        if(err){
+            console.log(err)
+        }
+        if(res==null){
+            callback(false)
+        }else{
+            callback(true)
+        }
+    })
+}
