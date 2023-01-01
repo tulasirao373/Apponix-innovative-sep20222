@@ -30,6 +30,7 @@ import { Contact, Home, MyLogin, Test } from './pages'
 import Youtube from './pages/Youtube/Youtube'
 import { Jewelery } from "./pages/jewelery";
 import { Layout } from './pages/layout';
+import { Register } from './pages/auth/register';
 
 export const App = () => {
 
@@ -44,6 +45,7 @@ export const App = () => {
                     < Route path='/jewelery' element={<Jewelery />} />
                     < Route path='/login' element={<MyLogin />} />
                     < Route path='/test' element={<Test />} />
+                    <Route path='/register' element={<Register/>}/>
 
                 </Routes>
             </Layout>
