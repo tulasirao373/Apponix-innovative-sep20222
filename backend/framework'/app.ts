@@ -7,6 +7,7 @@ var cors=require('cors')
 var bodyParser = require('body-parser')
 var path = require('path')
 var ejs = require('ejs')
+var fileUpload=require('express-fileupload')
 var endpoint=require('./src/routes')
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname, 'src/views'))
@@ -33,14 +34,13 @@ app.use(cors())
 //     app.get('/serverless',(req:any,res:any)=>{
 //         res.redirect('http://127.0.0.1:5500/test.html')
 //         })
-app.use(express.static(path.join(__dirname,'src/public/img')))
-app.use(express.static(path.join(__dirname,'src/public/videos')))
-
+app.use(express.static(path.join(__dirname, 'src/public/')))
+app.use(express.static(path.join(__dirname, 'src/public/videos')))
+app.use(fileUpload())
 app.use('/api',endpoint.homeRoute)
 app.use('/api',endpoint.register)
 app.use('/api',endpoint.userlogin)
 app.use('/api',endpoint.sellerUploadProduct)
-
 
 app.route('/')
 .get((req: any, res: any) => {
