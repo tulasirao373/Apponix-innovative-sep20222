@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dipika": "nodemon  app.ts"
+    "Closure": "nodemon  app.ts"
   },
   "keywords": [],
   "author": "",

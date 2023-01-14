@@ -5,7 +5,7 @@ var userProduct=new Schema({
     discription:String,
     price:String,
     title:String,
-    myfilename:String,
+    img_name:String
 })
 
 module.exports=mongoose.model('ProductInfo', userProduct)
